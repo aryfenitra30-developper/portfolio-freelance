@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MIARINTSOA Ary Fenitra - Développeur Multi-plateformes</title>
+
+        <!-- Bootstrap & Font Awesome -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+        <!-- Animate.css & AOS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+
+        <!-- CSS personnalisé -->
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- Préchargement de l'image de profil -->
+        <link rel="preload" as="image" href="img/profile.png" type="image/png">
+    </head>
+    <body data-bs-spy="scroll" data-bs-target="#main-nav">
+
+        <!-- Navbar -->
+        <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#home">MIARINTSOA Ary Fenitra</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">À Propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>-->
+                        <li class="nav-item"><a class="nav-link" href="#education">Formation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Header -->
+        <header id="home" class="d-flex align-items-center text-white" poster="img/background-code.jpg">
+            <!-- Vidéo en arrière-plan -->
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="img/bg-header.webm" type="video/webm">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+        
+            <!-- Contenu -->
+            <div class="overlay container text-center">
+                <h1 id="typed" class="display-3 fw-bold animate__animated animate__fadeInDown" style="min-height: 4rem;"></h1>
+                <p class="lead mt-3 animate__animated animate__fadeInUp">Développeur full-stack et créatif</p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
+                    <a href="files/CV MIARINTSOA Ary Fenitra.pdf" download class="btn btn-primary btn-lg animate__animated animate__fadeInUp">
+                        <i class="fas fa-download me-2"></i> Télécharger mon CV
+                    </a>
+                    <a href="#about" class="btn btn-primary btn-lg animate__animated animate__zoomIn">
+                        Découvrir mon profil
+                    </a>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- À propos -->
+        <section id="about" class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Image de profil -->
+                    <div class="col-md-4 text-center mb-4 mb-md-0" data-aos="fade-right">
+                        <img src="img/profile.png" class="img-fluid rounded-5 shadow-lg bg-light" alt="MIARINTSOA Ary Fenitra" loading="lazy">
+                    </div>
+
+
+                    <!-- Texte de présentation -->
+                    <div class="col-md-8" data-aos="fade-left">
+                        <h2 class="display-4 mb-4 sticky-section-title">À Propos de Moi</h2>
+                        <p class="lead">Programmeur informatique avec 3 ans d'expérience dans le développement d'applications mobiles et de bureau.</p>
+                        <p>Je me spécialise dans la création d'interfaces dynamiques et de solutions backend performantes via développement web et API RESTful. Rigoureux et efficace, j’ai contribué à réduire les taux de défauts logiciels.</p>
+                        <p>Compétences intermédiaires en administration système et réseau, déploiement VPS et gestion cloud.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Expérience -->
+        <section id="experience" class="py-5">
+            <div class="container">
+                <h2 class="display-4 text-center mb-5 sticky-section-title" data-aos="fade-up">Expérience Professionnelle</h2>
+                <div class="row" id="experience-container"></div>
+                <!--<div class="text-center mt-4">-->
+                <!--    <a href="#projects" class="btn btn-outline-dark">Voir mes projets</a>-->
+                <!--</div>-->
+            </div>
+        </section>
+
+        <!-- Projets -->
+        <!--<section id="projects" class="py-5 bg-light">-->
+        <!--    <div class="container">-->
+        <!--        <h2 class="display-4 text-center mb-5 sticky-section-title" data-aos="fade-up">Projets</h2>-->
+        <!--        <div class="row" id="projects-container"></div>-->
+        <!--        <div class="text-center mt-4">-->
+        <!--            <a href="#skills" class="btn btn-outline-dark">Voir mes compétences</a>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</section>-->
+
+        <!-- Formation -->
+        <section id="education" class="py-5">
+            <div class="container">
+                <h2 class="display-4 text-center mb-5 sticky-section-title" data-aos="fade-up">Formation</h2>
+                <div class="row" id="education-container"></div>
+                <div class="text-center mt-4">
+                    <a href="#skills" class="btn btn-outline-dark">Voir mes compétences</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences -->
+        <section id="skills" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="display-4 text-center mb-5 sticky-section-title" data-aos="fade-up">Compétences</h2>
+                <div class="row" id="skills-container"></div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-5" data-aos="fade-up">
+            <div class="container">
+                <h2 class="display-4 text-center mb-5">Contactez-moi</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card shadow-lg p-4">
+                            <div class="card-body text-center">
+                                <p class="lead">Je suis disponible pour de nouvelles opportunités. N'hésitez pas à me contacter.</p>
+                                <ul class="list-unstyled mt-4">
+                                    <li><i class="fas fa-map-marker-alt me-2 text-primary"></i>Lot I AP 31 bis Ampangabe, Antananarivo, Madagascar</li>
+                                    <li><i class="fas fa-envelope me-2 text-primary"></i> <a href="mailto:aryfenitra30@gmail.com">aryfenitra30@gmail.com</a></li>
+                                    <li><i class="fas fa-phone me-2 text-primary"></i> +261 38 75 576 15</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Contact -->
+        <section id="contact" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="display-4 text-center mb-5">Laissez-moi un message</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form id="contact-form" action="http://194.163.171.194:2025/server/save-message.php" method="POST">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nom</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Votre nom" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Votre email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Votre message..." required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Envoyer
+                                </button>
+                            </div>
+                        </form>
+                        <div id="form-message" class="mt-3 text-center"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center py-3 mt-5">
+            <div class="container">
+                <p>&copy; 2025 M. Ary Fenitra. Tous droits réservés.</p>
+            </div>
+        </footer>
+
+        <!-- JS Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

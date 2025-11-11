@@ -1,0 +1,138 @@
+/* --------------------- Personnalisation de la police --------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #ffc107 !important;
+}
+
+/* --------------------- ScrollSpy pour la navigation fluide --------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --------------------- Sections --------------------- */
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* --------------------- Navbar --------------------- */
+.navbar {
+    background-color: rgba(33, 37, 41, 0.9) !important;
+    backdrop-filter: blur(10px);
+}
+.navbar .nav-link {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.navbar .nav-link:hover {
+    color: #0d6efd !important;
+}
+
+/* --------------------- Header --------------------- */
+header#home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Vidéo en arrière-plan */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* couvre tout sans déformation */
+    z-index: -1;       /* derrière le contenu */
+}
+
+/* Overlay sombre */
+#home .overlay {
+    position: relative;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+    padding: 4rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* --------------------- Cartes (Projets, Compétences, Formation) --------------------- */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 0.75rem;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+.card-title {
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+/* --------------------- Listes dans cartes --------------------- */
+.list-unstyled li {
+    padding-bottom: 0.5rem;
+    line-height: 1.5;
+}
+.list-unstyled li i {
+    color: #198754;
+}
+
+/* --------------------- Boutons & liens --------------------- */
+.btn {
+    transition: transform 0.3s, background-color 0.3s;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Liens de contact */
+#contact a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+#contact a:hover {
+    color: #0d6efd;
+}
+
+/* Titres sticky */
+.sticky-section-title {
+    position: sticky;
+    top: 70px;
+    background-color: #f8f9fa;
+    z-index: 10;
+    padding: 0.5rem 0;
+    margin-bottom: 2rem;
+}
+
+/* --------------------- Responsive --------------------- */
+@media (max-width: 768px) {
+    .display-3, .display-4 {
+        font-size: 2.5rem;
+    }
+    .card-title {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 576px) {
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    .list-unstyled li {
+        font-size: 0.9rem;
+    }
+}
