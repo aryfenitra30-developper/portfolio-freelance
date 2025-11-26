@@ -79,7 +79,7 @@ const experiences = [
     {
         title: "Opérateur en programmation informatique",
         company: "RAPIDE SERVICE",
-        date: "10/2024 – présent",
+        date: "10/2024 – 10/2025",
         location: "Madagascar, Antanimena",
         tasks: [
             "Gestion de projets et développement de solutions informatiques sur mesure.",
