@@ -153,9 +153,9 @@ experiences.forEach(exp => {
 // ---------- SERVICES DYNAMIQUES ----------
 const services = [
     {
-        title: "Développement & Informatique",
+        title: "🧩Développement & Informatique",
         contents: [
-            "🧩 Développement web et outils numériques",
+            "Développement web et outils numériques",
             "Configuration, maintenance et support technique",
             "Gestion de fichiers, automatisation simple",
             "Manipulation de données techniques (CSV, JSON, bases)"
