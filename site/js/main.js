@@ -150,30 +150,80 @@ experiences.forEach(exp => {
     expContainer.appendChild(card);
 });
 
-// ---------- Projets DYNAMIQUES ----------
-const projets = [
+// ---------- SERVICES DYNAMIQUES ----------
+const services = [
     {
-        title: "Stagiaire en informatique",
-        company: "TIKO",
-        date: "08/2023 – 12/2023",
-        location: "Tanjombato, Antananarivo",
-        tasks: [
-            "Développement d’outils numériques pour la campagne présidentielle 2023.",
-            "Assistance technique aux équipes terrain.",
-            "Collecte et traitement de données en ligne, traitement d’images 3D."
+        title: "Développement & Informatique",
+        contents: [
+            "🧩 Développement web et outils numériques",
+            "Configuration, maintenance et support technique",
+            "Gestion de fichiers, automatisation simple",
+            "Manipulation de données techniques (CSV, JSON, bases)"
         ]
     },
     {
-        title: "Concours au développement d'application web, mobile",
-        company: "HACKATON 2021",
-        date: "08/2021",
-        location: "Antananarivo",
-        tasks: [
-            "Collaboration au développement d’applications web et mobiles.",
-            "Transformation de maquettes en applications fonctionnelles."
+        title: "🗂️ Saisie & Traitement de Données",
+        contents: [
+            "Saisie rapide et précise de données structurées",
+            "Contrôle qualité et vérification des informations",
+            "Nettoyage, correction et mise à jour de fichiers",
+            "Organisation de documents, tableaux et bases de données"
         ]
-    }
+    },
+    {
+        title: "📍 Données GPS & Itinéraires",
+        contents: [
+            "Saisie et mise à jour d’itinéraires GPS",
+            "Vérification d’exactitude des coordonnées",
+            "Structuration de données pour cartographie",
+            "Conversion de formats : CSV ⇄ Excel ⇄ JSON ⇄ GeoJSO"
+        ]
+    },
 ];
+
+const servContainer = document.getElementById("service-container");
+services.forEach(exp => {
+    const card = document.createElement("div");
+    card.className = "col-lg-12 mb-4";
+    card.innerHTML = `
+        <div class="card h-100 shadow-sm border-0" data-aos="fade-up">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h4 class="card-title mb-0">${exp.title}</h4>
+                </div>
+                <ul class="list-unstyled mt-3">
+                    ${exp.contents.map(content => `<li><i class="fas fa-check-circle text-success me-2"></i>${task}</li>`).join("")}
+                </ul>
+            </div>
+        </div>
+    `;
+    expContainer.appendChild(card);
+});
+
+// ---------- Projets DYNAMIQUES ----------
+// const projets = [
+//     {
+//         title: "Stagiaire en informatique",
+//         company: "TIKO",
+//         date: "08/2023 – 12/2023",
+//         location: "Tanjombato, Antananarivo",
+//         tasks: [
+//             "Développement d’outils numériques pour la campagne présidentielle 2023.",
+//             "Assistance technique aux équipes terrain.",
+//             "Collecte et traitement de données en ligne, traitement d’images 3D."
+//         ]
+//     },
+//     {
+//         title: "Concours au développement d'application web, mobile",
+//         company: "HACKATON 2021",
+//         date: "08/2021",
+//         location: "Antananarivo",
+//         tasks: [
+//             "Collaboration au développement d’applications web et mobiles.",
+//             "Transformation de maquettes en applications fonctionnelles."
+//         ]
+//     }
+// ];
 
 // const projContainer = document.getElementById("projects-container");
 // projets.forEach(proj => {
@@ -231,59 +281,49 @@ formations.forEach(edu => {
 // ---------- Compétences DYNAMIQUES ----------
 const competences = [
     {
-        category: "Langages & Frameworks",
+        category: "Compétences techniques",
+        icon: "fas fa-cogs",
+        items: [
+            "Maîtrise Windows, Linux, Android et Web",
+            "Manipulation de données : CSV, Excel, Sheets, JSON",
+            "Utilisation de logiciels et outils spécialisés",
+            "Développement web, mobile et desktop",
+            "Intégration d’APIs REST",
+            "Bases de données : PostgreSQL, MySQL, SQLite",
+            "Déploiement & Infrastructure : Docker, VPS, CI/CD",
+            "Versioning avec Git",
+            "Sécurisation des services : HTTPS, SSH, FTP, VPN"
+        ]
+    },
+    {
+        category: "Langages & Technologies",
         icon: "fas fa-code",
         items: [
-            "JavaScript / TypeScript: Node.js, Express.js, React Native",
-            "Flutter-Dart: Dio, Http",
-            "Python: PySide6, Flask (API RESTful)",
-            "PHP: Laravel, CodeIgniter"
+            "JavaScript / TypeScript : Node.js, Express, React Native",
+            "Flutter / Dart",
+            "Python : PySide6, Flask",
+            "PHP : Laravel, CodeIgniter",
+            "HTML, CSS, Tailwind, Bootstrap, Figma, FlutterFlow"
         ]
     },
     {
-        category: "Bases de données & APIs",
-        icon: "fas fa-database",
+        category: "Compétences personnelles",
+        icon: "fas fa-user-check",
         items: [
-            "Bases de données: SQLite, PostgreSQL, MySQL",
-            "APIs & Web Services: RESTful, JSON, Auth JWT, WebSocket"
-        ]
-    },
-    {
-        category: "Design & Interfaces",
-        icon: "fas fa-palette",
-        items: [
-            "HTML5, CSS3, Bootstrap, React, Tailwind, FlutterFlow, Figma, QT Designer"
-        ]
-    },
-    {
-        category: "Déploiement & Outils",
-        icon: "fas fa-server",
-        items: [
-            "Plateformes: Windows, Linux, Android, Web",
-            "Déploiement & Infrastructure: Docker / Docker Compose, VPS, Ngrok",
-            "CI/CD: GitHub Actions, GitLab CI",
-            "Versioning: Git",
-            "Protocoles & Accès: SSH, RDP, FTP, VPN, HTTPS, UDP, SMTP"
-        ]
-    },
-    {
-        category: "Outils & Pratiques supplémentaires",
-        icon: "fas fa-tools",
-        items: [
-            "Tests & Qualité: unitaires & E2E (flutter_test, integration_test, Firebase Test Lab), fiabilité 99,5%",
-            "Notifications: push temps réel et multi-canaux (firebase_messaging, flutter_local_notifications)",
-            "Réseau & API: requêtes HTTP sécurisées (dio, http), JSON objets (json_serializable, freezed), JWT + TLS + pinning",
-            "Offline-first & Background: stockage local (sqflite, drift, hive), tâches en arrière-plan (workmanager, background_fetch)",
-            "Sécurité & intégrité: secrets sécurisés (flutter_secure_storage), Bcrypt"
+            "Rigueur, précision, sens du détail",
+            "Organisation et constance",
+            "Autonomie et fiabilité",
+            "Très bon niveau en français écrit et lecture",
+            "Adaptation rapide aux outils et processus"
         ]
     },
     {
         category: "Langues",
-        icon: "fas fa-globe-americas",
+        icon: "fas fa-globe",
         items: [
-            "Malgache: Langue maternelle",
-            "Français: Niveau intermédiaire",
-            "Anglais: Débutant"
+            "Malgache : langue maternelle",
+            "Français : niveau intermédiaire",
+            "Anglais : débutant"
         ]
     }
 ];
@@ -292,7 +332,7 @@ const skillsContainer = document.getElementById("skills-container"); // div à c
 
 competences.forEach(skill => {
     const card = document.createElement("div");
-    card.className = "col-md-6 mb-4"; // ou col-md-12 si tu veux toute la largeur
+    card.className = "col-md-6 mb-4";
     card.innerHTML = `
         <div class="card h-100 border-0 shadow-sm">
             <div class="card-body">
