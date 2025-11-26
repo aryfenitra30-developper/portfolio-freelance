@@ -176,29 +176,40 @@ const services = [
             "Saisie et mise à jour d’itinéraires GPS",
             "Vérification d’exactitude des coordonnées",
             "Structuration de données pour cartographie",
-            "Conversion de formats : CSV ⇄ Excel ⇄ JSON ⇄ GeoJSO"
+            "Conversion de formats : CSV ⇄ Excel ⇄ JSON ⇄ GeoJSON"
         ]
     },
 ];
 
 const servContainer = document.getElementById("service-container");
-services.forEach(exp => {
+
+services.forEach(service => {
     const card = document.createElement("div");
-    card.className = "col-lg-12 mb-4";
+
+    // Colonne plus adaptée (2 colonnes sur desktop)
+    card.className = "col-lg-6 col-md-12 mb-4";
+
     card.innerHTML = `
         <div class="card h-100 shadow-sm border-0" data-aos="fade-up">
             <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h4 class="card-title mb-0">${exp.title}</h4>
+                <div class="d-flex align-items-center mb-3">
+                    <h4 class="card-title mb-0">${service.title}</h4>
                 </div>
-                <ul class="list-unstyled mt-3">
-                    ${exp.contents.map(content => `<li><i class="fas fa-check-circle text-success me-2"></i>${task}</li>`).join("")}
+                <ul class="list-unstyled mt-2">
+                    ${service.contents
+                        .map(content => `
+                            <li class="mb-2">
+                                <i class="fas fa-check-circle text-success me-2"></i>${content}
+                            </li>
+                        `)
+                        .join("")}
                 </ul>
             </div>
         </div>
     `;
-    expContainer.appendChild(card);
+    servContainer.appendChild(card);
 });
+
 
 // ---------- Projets DYNAMIQUES ----------
 // const projets = [
